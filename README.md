@@ -77,3 +77,9 @@ Requirements
 - All sources should be committed to public source repository, such as: http://github.com, http://bitbucket.org, etc
 - HTML5 doctype should be used
 - Feel free to use 3rd party libraries and frameworks (like jQuery, backbone, sass etc... )
+
+Installation
+-----------------
+- npm install
+- bower install
+- ember s
