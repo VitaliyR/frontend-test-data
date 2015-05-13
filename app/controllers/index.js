@@ -39,6 +39,10 @@ export default Ember.ArrayController.extend({
       var self = this;
       var addQty = product.get('qty');
 
+      if (!addQty){
+        return;
+      }
+
       this.store.find('item', { product: product.get('id') }).then(function(basketModel){
         basketModel = basketModel.get('firstObject');
 

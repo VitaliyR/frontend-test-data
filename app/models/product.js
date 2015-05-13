@@ -12,7 +12,9 @@ export default DS.Model.extend({
   expanded: false,
 
   // in the shop
-  qty: 1,
+  qty: function(){
+    return this.get('qtyMin');
+  }.property('qtyMin'),
 
   qtyMin: function(){
     return (this.get('qtyMax') > 0) * 1;
@@ -22,11 +24,11 @@ export default DS.Model.extend({
     return this.get('quantity') - (this.get('basket.qty') || 0);
   }.property('basket.qty', 'quantity'),
 
-  _qtyUpdate: function(){
+  /*_qtyUpdate: function(){
     if (!this.get('qtyMin')){
       this.set('qty', 0);
     }
-  }.observes('basket.qty'),
+  }.observes('basket.qty', 'qtyMin'),*/
 
   basket: DS.belongsTo('item', { async: true })
 
