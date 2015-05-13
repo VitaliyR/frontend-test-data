@@ -1,0 +1,10 @@
+{{vr-basket basket=basket}}
+<div class="sorting">
+    <span>Sort by</span>
+  {{view "select" content=sortModes optionValuePath="content.value" optionLabelPath="content.text" value=sort}}
+</div>
+<div class="products">
+  {{#each product in controller}}
+    {{vr-product product=product expandedProduct="expandedProduct" addToCart="addToCart"}}
+  {{/each}}
+</div>

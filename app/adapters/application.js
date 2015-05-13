@@ -1,5 +1,5 @@
 import DS from 'ember-data';
-import config from 'frontend-test/config/environment';
+import config from 'frontend-test-data/config/environment';
 
 var ApplicationAdapter = DS.RESTAdapter.extend({
   host: config.apiURL,
