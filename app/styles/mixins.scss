@@ -1,0 +1,13 @@
+@mixin box-shadow($top, $left, $blur, $stretch, $color, $inset:"") {
+  -webkit-box-shadow:$top $left $blur $stretch $color #{$inset};
+  -moz-box-shadow:$top $left $blur $stretch $color #{$inset};
+  box-shadow:$top $left $blur $stretch $color #{$inset};
+}
+
+@mixin clearfix {
+  &::after{
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
