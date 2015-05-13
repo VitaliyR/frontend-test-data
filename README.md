@@ -83,3 +83,18 @@ Installation
 - npm install
 - bower install
 - ember s
+- Navigate to [http://localhost:4200](http://localhost:4200)
+
+Local simple API server would be started up at 4200.
+
+Cons
+-----------------
+- IE9+ (including) because of SPA technique. Plus Ember will remove support of IE8 from 2.0 version which is coming soon.
+- Didn't tested UI in IE :)
+
+TODO
+-----------------
+- Test UI in IE
+- i18n
+- More modularity for Basket component
+- Retina graphics, image optimization, use sprites
