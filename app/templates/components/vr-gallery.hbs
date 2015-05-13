@@ -1,0 +1,8 @@
+<img {{bind-attr src=logo}}/>
+<div class="thumbs-container">
+    <div class="left" {{action "slide" "left"}}></div>
+    <div class="thumbs">
+      {{#each image in images}}<img {{action "changeLogo" image}} {{bind-attr src=image}}/>{{/each}}
+    </div>
+    <div class="right" {{action "slide" "right"}}></div>
+</div>

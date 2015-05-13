@@ -1,0 +1,57 @@
+$thumb-size: 50px;
+
+.gallery {
+
+  &::selection{
+    background: none;
+  }
+
+  > div {
+    display: inline-block;
+  }
+
+  .left, .right {
+    width: 12px;
+    height: 18px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: ($thumb-size/2) - 18/2
+  }
+
+  .left {
+    background: url(/assets/images/left.png) no-repeat;
+    left: 5px;
+  }
+
+  .right {
+    background: url(/assets/images/right.png) no-repeat;
+    right: 5px;
+  }
+
+  .thumbs-container {
+    width: 100%;
+    position: relative;
+  }
+
+  .thumbs {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-left: 21px solid #FFFFFF;
+    border-right: 21px solid #FFFFFF;
+    z-index: 1;
+    text-align: center;
+
+    img {
+      border: 1px solid #CECECE;
+      width: $thumb-size;
+      height: $thumb-size;
+      cursor: pointer;
+      margin: 0 2px;
+
+    }
+  }
+
+}

@@ -1,0 +1,18 @@
+<div class="title">
+    <span>Shopping basket</span>
+    <div class="cart">
+        <div>{{inCart}}</div>
+    </div>
+</div>
+<div class="item-container">
+{{#each item in basket}}
+    <div class="item">
+      <div class="title">{{item.product.title}}</div>
+      <div class="price">${{item.product.price}}</div>
+      {{vr-numberfield value=item.qty min=0 max=item.product.quantity}}
+    </div>
+{{/each}}
+</div>
+<div class="total">
+  $ {{total}}
+</div>

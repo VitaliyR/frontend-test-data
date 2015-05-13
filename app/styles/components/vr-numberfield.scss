@@ -1,0 +1,40 @@
+.numberfield {
+  position: relative;
+
+  &::selection{
+    background: none;
+  }
+
+  input {
+    vertical-align: top;
+    height: 22px;
+    box-sizing: border-box;
+    border: 1px solid #CECECE;
+    text-align: center;
+    border-right: 0;
+    outline: 0;
+    width: 100%;
+    padding-right: 18px;
+  }
+
+
+  .buttons {
+    display: inline-block;
+    border: 1px solid #CECECE;
+    box-sizing: border-box;
+    position: absolute;
+    margin-left: -18px;
+
+    > div {
+      width: 16px;
+      height: 10px;
+      cursor: pointer;
+    }
+    .up {
+      background: url(/assets/images/up.png) no-repeat;
+    }
+    .down {
+      background: url(/assets/images/down.png) no-repeat;
+    }
+  }
+}
