@@ -98,3 +98,5 @@ TODO
 - i18n
 - More modularity for Basket component
 - Retina graphics, image optimization, use sprites
+- Cover the code with unit-test (not just default mocks)
+- Write some inline documentation (JSDoc)
