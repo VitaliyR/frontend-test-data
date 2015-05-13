@@ -5,6 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'frontend-test-data',
     environment: environment,
     baseURL: '/',
+    apiURL: '/api',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
