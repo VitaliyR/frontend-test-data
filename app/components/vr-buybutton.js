@@ -7,8 +7,8 @@ export default Ember.Component.extend({
   classNameBindings: ['disabled'],
 
   price: function(){
-    return this.get('item.price').toFixed(2);
-  }.property('item.price'),
+    return (this.get('item.price') * (this.get('item.qty') || 1)).toFixed(2);
+  }.property('item.price', 'item.qty'),
 
   _disabled: function(){
     this.set('disabled', !this.get('item.qty'));
