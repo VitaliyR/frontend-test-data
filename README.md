@@ -100,3 +100,7 @@ TODO
 - Retina graphics, image optimization, use sprites
 - Cover the code with unit-test (not just default mocks)
 - Write some inline documentation (JSDoc)
+
+Issues with ember-cli
+-----------------
+- If your console output full with recrawls - kill watchman process. Read more about recrawls in google. 

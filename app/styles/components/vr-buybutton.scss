@@ -1,7 +1,11 @@
 .buyButton {
   width: 116px;
   height: 40px;
-  background: url(/assets/images/buy.png) no-repeat;
+
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/buy.png);
+  @include linear-gradient(#00EF30, #00AB20);
+
   color: #FFFFFF;
   font-size: 15px;
   cursor: pointer;

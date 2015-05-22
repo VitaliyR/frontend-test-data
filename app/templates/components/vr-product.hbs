@@ -1,11 +1,13 @@
-{{vr-gallery gallery=product.gallery_id}}
-<div class="text" {{action "expandDescription" product}}>
-    <h2><u>{{product.title}}</u></h2>
-    <p class="text-cut">
-      {{product.description}}
-    </p>
-</div>
-<div class="buy-container">
-  {{vr-numberfield value=product.qty min=product.qtyMin max=product.qtyMax}}
-  {{vr-buybutton item=product action="addToCart"}}
+<div class="container">
+    {{vr-gallery gallery=product.gallery_id}}
+      <div class="text" {{action "expandDescription" product}}>
+          <h2><u>{{product.title}}</u></h2>
+          <p class="text-cut">
+            {{product.description}}
+          </p>
+      </div>
+      <div class="buy-container">
+        {{vr-numberfield value=product.qty min=product.qtyMin max=product.qtyMax}}
+        {{vr-buybutton item=product action="addToCart"}}
+      </div>
 </div>

@@ -12,14 +12,30 @@ div.products {
 
 div.product {
   display: inline-block;
-  border: 1px solid #CECECE;
   width: $product-width;
   height: $product-height;
   margin: $product-margin;
   vertical-align: top;
+  position: relative;
+  z-index: 1;
+
+  .container{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #CECECE;
+    background: #FFFFFF;
+    @include box-shadow(3px, 3px, 15px, 3px, rgba(0, 0, 0, 0.075));
+  }
 
   &.expanded {
     height: auto;
+    z-index: 2;
+
+    .container{
+      height: auto;
+      position: absolute;
+
+    }
 
     .text {
       max-height: none;
@@ -36,7 +52,6 @@ div.product {
     }
   }
 
-  @include box-shadow(3px, 3px, 15px, 3px, rgba(0, 0, 0, 0.075));
 
   .gallery > img {
     width: 210px;

@@ -62,7 +62,7 @@ export default Ember.ArrayController.extend({
     expandedProduct: function(product){
       var prevExpanded = this.get('expandedProduct');
 
-      if (prevExpanded){
+      if (prevExpanded && prevExpanded !== product){
         prevExpanded.set('expanded', false);
       }
 
