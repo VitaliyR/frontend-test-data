@@ -79,6 +79,7 @@ div.product {
 
     &::after {
       background: url(/assets/images/textbg.png) repeat-x bottom center;
+      @include linear-gradient(#FFFFFF 90%, #FFFFFF 100%, rgba(255, 255, 255, 0));
       content: '';
       display: block;
       height: 27px;
