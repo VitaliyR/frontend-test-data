@@ -102,3 +102,12 @@ div.basket {
     text-overflow: ellipsis;
   }
 }
+
+@media screen and (max-width: $mobile-width){
+  div.basket {
+    left: 50%;
+    margin-left: -107px;
+    top: 10px;
+  }
+}
+

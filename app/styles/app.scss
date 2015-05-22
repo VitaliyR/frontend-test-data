@@ -1,5 +1,7 @@
 @import "mixins";
 
+$mobile-width: 420px;
+
 html, body {
   height: 100%;
 }
@@ -29,6 +31,17 @@ div.sorting {
   user-select: none;
 }
 
+@media screen and (max-width: $mobile-width){
+  body {
+    > div.ember-view{
+      margin: 10px 0;
+    }
+  }
+
+  div.sorting {
+    text-align: center;
+  }
+}
 
 
 @import "components/__init";

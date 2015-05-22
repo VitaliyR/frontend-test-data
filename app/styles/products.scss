@@ -120,8 +120,16 @@ div.product {
     @include clearfix;
   }
 
-  /*&:nth-child(-n+#{$product-in-row}){
-    margin-top: 0;
-  }*/
 }
 
+@media screen and (max-width: $mobile-width){
+  div.product{
+    display: block;
+    margin: 20px auto;
+
+    &.expanded .container {
+      position: static;
+    }
+
+  }
+}
