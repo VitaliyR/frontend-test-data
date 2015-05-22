@@ -9,6 +9,12 @@ export default Ember.Component.extend({
 
   classNames: ['numberfield'],
 
+  classNameBindings: ['enabled::disabled'],
+
+  enabled: true,
+
+  isDisabled: Ember.computed.not('enabled'),
+
   initiator: function(){
     var input;
 

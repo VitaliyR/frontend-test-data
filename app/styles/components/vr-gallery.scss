@@ -16,7 +16,12 @@ $thumb-size: 50px;
     cursor: pointer;
     position: absolute;
     z-index: 2;
-    top: ($thumb-size/2) - 18/2
+    top: ($thumb-size/2) - 18/2;
+    opacity: 0.85;
+
+    &:hover{
+      opacity: 1;
+    }
   }
 
   .left {

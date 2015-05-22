@@ -7,7 +7,7 @@
           </p>
       </div>
       <div class="buy-container">
-        {{vr-numberfield value=product.qty min=product.qtyMin max=product.qtyMax}}
+        {{vr-numberfield value=product.qty min=product.qtyMin max=product.qtyMax enabled=product.qty}}
         {{vr-buybutton item=product action="addToCart"}}
       </div>
 </div>

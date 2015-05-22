@@ -1,3 +1,10 @@
+@mixin button{
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .numberfield {
   position: relative;
 
@@ -31,10 +38,45 @@
       cursor: pointer;
     }
     .up {
-      background: url(/assets/images/up.png) no-repeat;
+      @include linear-gradient(#00EF30, #00AE21);
+
+      &::after{
+        @include button;
+        background: url(/assets/images/vr-numberfield/up.png) no-repeat center center;
+      }
+
+      &:hover{
+        @include linear-gradient(#5bff54, #00AE21);
+      }
+
+      &:active{
+        background: #00AE21;
+      }
     }
     .down {
-      background: url(/assets/images/down.png) no-repeat;
+      @include linear-gradient(#00AE21, #00EF30);
+
+      &::after{
+        @include button;
+        background: url(/assets/images/vr-numberfield/down.png) no-repeat center center;
+      }
+
+      &:hover{
+        @include linear-gradient(#00AE21, #5bff54);
+      }
+
+      &:active{
+        background: #00AE21;
+      }
+    }
+  }
+
+  &.disabled {
+    .buttons .up, .buttons .down{
+      background: #CCCCCC;
+    }
+    input {
+      color: #CCCCCC;
     }
   }
 }

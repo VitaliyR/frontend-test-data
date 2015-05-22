@@ -18,6 +18,10 @@
     @include linear-gradient(#00dd2c, #00951c);
   }
 
+  &.disabled {
+    background: #CCCCCC;
+  }
+
   &::after{
     background: url(/assets/images/add_to_basket.png) no-repeat center center;
     content: '';
