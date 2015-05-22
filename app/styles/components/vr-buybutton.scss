@@ -1,19 +1,36 @@
 .buyButton {
   width: 116px;
-  height: 40px;
-
-  background-repeat: no-repeat;
-  background-image: url(/assets/images/buy.png);
-  @include linear-gradient(#00EF30, #00AB20);
-
+  height: 32px;
+  line-height: 32px;
   color: #FFFFFF;
   font-size: 15px;
   cursor: pointer;
 
+  background-repeat: no-repeat;
+  @include linear-gradient(#00EF30, #00AB20);
+  @include border-radius(5px);
+
+  &:hover{
+    @include linear-gradient(#00fc31, #00c725);
+  }
+
+  &:active{
+    @include linear-gradient(#00dd2c, #00951c);
+  }
+
+  &::after{
+    background: url(/assets/images/add_to_basket.png) no-repeat center center;
+    content: '';
+    width: 34px;
+    height: 100%;
+    border-left: 1px solid #FFFFFF;
+    float: right;
+  }
+
   span {
     text-align: center;
-    display: block;
-    width: 75px;
-    line-height: 2.2;
+    width: 80px;
+    float: left;
+    overflow: hidden;
   }
 }
